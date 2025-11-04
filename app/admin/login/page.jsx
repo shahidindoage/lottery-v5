@@ -86,8 +86,8 @@ export default function AdminLogin() {
         animation: 'fadeIn 0.8s ease'
       }}>
          
-        <h2 style={{ color: '#d6af66', marginBottom: 12, fontFamily:"PP-NEUE" ,fontSize: 35}}>{t.adminPanel}</h2>
-        <p style={{ color: '#ccc', marginBottom: 24, fontSize: 14, fontFamily:"playfair-display-v2" }}>{t.adminInfo}</p>
+        <h2 style={{ color: '#d6af66', marginBottom: 12, fontFamily:"PP-NEUE" ,fontSize: 35,fontWeight:"100"}}>{t.adminPanel}</h2>
+        <p style={{ color: '#ccc', marginBottom: 24, fontSize: 14, fontFamily:"playfair-display-v2" ,fontWeight:"100"}}>{t.adminInfo}</p>
 
         {error && <div style={{ color: '#ff4f4f', marginBottom: 16, fontWeight: 'bold' }}>{error}</div>}
 
@@ -176,8 +176,8 @@ export default function AdminLogin() {
           </button>
         </form>
 
-        <p style={{ marginTop: 28, fontSize: 12, color: '#bbb' }}>
-          🚫 <span style={{ color: '#d6af66', fontFamily:"playfair-display-v2"  }}>{t.authOnly}</span>
+        <p style={{ marginTop: 28, fontSize: 12, color: '#bbb' ,fontWeight:"100"}}>
+          🚫 <span style={{ color: '#d6af66', fontFamily:"playfair-display-v2" ,fontWeight:"100" }}>{t.authOnly}</span>
         </p>
       </div>
 
