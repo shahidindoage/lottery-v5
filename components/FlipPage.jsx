@@ -129,7 +129,7 @@ export default function FlipPage() {
 
       {/* Set Winner Limit */}
       {!started && (
-        <div style={{ marginBottom: 20 }}>
+        <div style={{ marginBottom: 20,    gap: '10px',width: '100%', maxWidth: '300px' ,display:'flex',flexDirection:'column'}}>
           <input 
             type="number" 
             min={1} 
@@ -137,7 +137,7 @@ export default function FlipPage() {
             value={winnerLimit} 
             onChange={e => setWinnerLimit(parseInt(e.target.value))}
             placeholder={t.limitPlaceholder}
-            style={{ padding: '13px 35px', fontSize: '1rem', borderRadius: 8, border: '1px solid #ccc', marginRight: 10,fontWeight: "100"  }}
+            style={{ padding: '13px 35px', fontSize: '1rem', borderRadius: 8, border: '1px solid #ccc', marginRight: 10,fontWeight: "100" ,width:'100%',textAlign:"center" }}
           />
 
            <button
