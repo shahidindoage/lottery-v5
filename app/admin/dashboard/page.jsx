@@ -84,7 +84,7 @@ export default async function AdminDashboard({ searchParams }) {
         <div className="logout-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           
           {/* 🔽 Country Code Filter */}
-          <form method="GET">
+          {/* <form method="GET">
             <label htmlFor="countryCode" style={{ marginRight: 8,fontFamily:"playfair-display-v2"  }} className='filter-label' >
               Filter by Country Code:
             </label>
@@ -122,7 +122,7 @@ export default async function AdminDashboard({ searchParams }) {
             >
               Filter
             </button>
-          </form>
+          </form> */}
 
           {/* ✅ Toggle Registration Button */}
           {/* <form
@@ -164,7 +164,7 @@ export default async function AdminDashboard({ searchParams }) {
             <tr>
               <th>Customer ID</th>
               <th>Name</th>
-              <th>WhatsApp Number</th>
+              <th>Mobile Number</th>
               <th>Email</th>
               <th>Table</th>
               <th>Seat</th>

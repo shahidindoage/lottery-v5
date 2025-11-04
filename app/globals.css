@@ -374,7 +374,7 @@
 }
 .logout-wrapper{
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   
 }
 .game-logout-wrapper{
@@ -687,7 +687,7 @@
 
 .phone-wrapper input {
   width: 100%;
-  padding-left: 60px !important; /* space for dropdown */
+  /* padding-left: 60px !important;  */
 }
 
 .country-select {

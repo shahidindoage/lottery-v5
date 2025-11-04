@@ -7,7 +7,7 @@ export default function HomePage() {
   const [form, setForm] = useState({
     name: '',
     phone: '',
-    countryCode: '+971',
+    // countryCode: '+971',
     email:"",
     tableNumber:"",
     seatNumber:"",
@@ -25,7 +25,7 @@ export default function HomePage() {
   // ✅ WhatsApp validation helper
   const validatePhone = (num) => {
     const cleaned = num.replace(/\D/g, '');
-    return cleaned.length >= 9 && cleaned.length <= 11;
+    return cleaned.length >= 9 && cleaned.length <= 15;
   };
 
   // async function handleSubmit(e) {
@@ -88,7 +88,8 @@ async function handleSubmit(e) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         ...form,
-        phone: `${form.countryCode}${form.phone.replace(/\D/g, '')}`,
+        // phone: `${form.countryCode}${form.phone.replace(/\D/g, '')}`,
+         phone: `${form.phone.replace(/\D/g, '')}`,
       
       }),
     });
@@ -232,7 +233,7 @@ async function handleSubmit(e) {
             {/* Phone */}
             <div className="form-group phone-input">
               <div className="phone-wrapper">
-                <select
+                {/* <select
                   value={form.countryCode || '+971'}
                   onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
                   className="country-select font2"
@@ -341,7 +342,7 @@ async function handleSubmit(e) {
   <option value="+1">🇺🇸 +1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;United States</option>
   <option value="+84">🇻🇳 +84 &nbsp;&nbsp;&nbsp;Vietnam</option>
   <option value="+998">🇺🇿 +998 &nbsp;Uzbekistan</option>
-                </select>
+                </select> */}
                 <input
                   type="text"
                   placeholder=" "
@@ -350,7 +351,9 @@ async function handleSubmit(e) {
                   required
                   className="font2"
                 />
-                <label className="phone-label font2">{t.phone}</label>
+
+                {/* phone-label */}
+                <label className="name-label font2">{t.phone}</label> 
               </div>
             </div>
 
@@ -431,7 +434,7 @@ const translations = {
   en: {
     title: 'Join the Lottery Draw!',
     fullName: 'Full Name',
-    phone: 'WhatsApp Number',
+    phone: 'Mobile Number',
     email:'Email',
     tableno:'Table Number',
     seatno:'Seat Number',
@@ -447,7 +450,7 @@ const translations = {
   ru: {
     title: 'Присоединяйтесь к розыгрышу призов!',
     fullName: 'ФИО',
-    phone: 'Номер WhatsApp',
+    phone: 'Номер мобильного телефона',
     email:'Электронная почта',
     tableno:'Номер стола',
     seatno:'Номер места',

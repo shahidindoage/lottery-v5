@@ -68,10 +68,10 @@ export default function FlipPage() {
     setCard({ ...card, flipped: true, winner, fixed: true });
     setAssignedWinners(prev => [...prev, winner]);
 
-    setTimeout(() => {
-      setPopupText(`${t.youWon}\n\nCustomer ID: ${winner.uniqueId}`);
-      setShowPopup(true);
-    }, 500);
+    // setTimeout(() => {
+    //   setPopupText(`${t.youWon}\n\nCustomer ID: ${winner.uniqueId}`);
+    //   setShowPopup(true);
+    // }, 500);
   };
 
   // Reset the game
