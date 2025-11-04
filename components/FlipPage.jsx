@@ -137,7 +137,7 @@ export default function FlipPage() {
             value={winnerLimit} 
             onChange={e => setWinnerLimit(parseInt(e.target.value))}
             placeholder={t.limitPlaceholder}
-            style={{ padding: '12px 12px', fontSize: '1rem', borderRadius: 8, border: '1px solid #ccc', marginRight: 10 }}
+            style={{ padding: '13px 35px', fontSize: '1rem', borderRadius: 8, border: '1px solid #ccc', marginRight: 10,fontWeight: "100"  }}
           />
 
            <button
