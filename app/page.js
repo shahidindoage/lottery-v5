@@ -9,8 +9,7 @@ export default function HomePage() {
     phone: '',
     // countryCode: '+971',
     email:"",
-    tableNumber:"",
-    seatNumber:"",
+  
     terms: false,
     privacy: true,
   });
@@ -69,14 +68,12 @@ async function handleSubmit(e) {
     return setError("phone");
   if (!form.email)
     return setError("emial");
-  if( !form.tableNumber )
-    return setError("table");
+
  
   if (!form.terms)
     return setError("terms");
 
-   if (!form.seatNumber )
-    return setError("seat");
+
 
   if (!validatePhone(form.phone))
     return setError(t.errorInvalidPhone);
@@ -368,7 +365,7 @@ async function handleSubmit(e) {
               />
               <label className="font2 name-label">{t.email}</label>
             </div>
-             <div className="form-group font2">
+             {/* <div className="form-group font2">
               <input
                 type="text"
                 placeholder=" "
@@ -389,7 +386,7 @@ async function handleSubmit(e) {
                 className="font2"
               />
               <label className="font2 name-label">{t.seatno}</label>
-            </div>
+            </div> */}
            
 
             {/* Checkboxes */}

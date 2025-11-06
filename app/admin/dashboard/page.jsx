@@ -166,8 +166,7 @@ export default async function AdminDashboard({ searchParams }) {
               <th>Name</th>
               <th>Mobile Number</th>
               <th>Email</th>
-              <th>Table</th>
-              <th>Seat</th>
+             
               <th>Terms</th>
               <th>Winner</th>
               <th>Submitted At</th>
@@ -187,8 +186,7 @@ export default async function AdminDashboard({ searchParams }) {
                 <td>{s.name}</td>
                 <td>{s.phone || '-'}</td>
                 <td>{s.email}</td>
-                <td>{s.table_number}</td>
-                <td>{s.seat_number}</td>
+  
                 <td>{s.accepted_terms ? 'Yes' : 'No'}</td>
                 <td>{s.winner === 1 ? '✅' : '❌'}</td>
                 <td>{new Date(s.createdAt).toLocaleString()}</td>

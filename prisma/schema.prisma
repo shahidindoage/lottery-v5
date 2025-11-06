@@ -13,8 +13,6 @@ model LotterySubmission {
   name             String
   email            String?      // new field
   phone            String?
-  table_number     String?      // new field
-  seat_number      String?      // new field
   accepted_terms   Boolean
   accepted_privacy Boolean
   winner           Int      @default(0)

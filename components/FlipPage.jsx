@@ -105,11 +105,19 @@ export default function FlipPage() {
     handleFlip();
   };
 
+  const handleBack = () => {
+    router.back();
+    setTimeout(() => {
+      window.location.reload();
+    }, 100); // small delay to ensure navigation happens first
+  };
+
+
   return (
     <div className='flip-wrapper'>
       {/* Back Button */}
       <button 
-        onClick={() => router.back()} 
+        onClick={handleBack}
         style={{ position: 'absolute', top: 20, left: 20, zIndex: 100, padding: '8px 12px', borderRadius: 6, border: 'none', background: '#d6af66', cursor: 'pointer' }}
       >
         {t.back}
@@ -178,8 +186,8 @@ export default function FlipPage() {
             <div className="front" style={{fontWeight:"100"}}><span>?</span></div>
             <div className="back" style={{fontWeight:"100"}}>
               {card?.winner ? <>
-                    Winner <br />
-                    <span style={{color:'green',fontFamily:"playfair-display-v2",fontWeight:"100"}}>
+                  <span style={{fontFamily:"playfair-display-v2"}}> Winner</span> <br />
+                    <span style={{color:'green',fontFamily:"playfair-display-v2",fontWeight:"100",marginTop:"-10%"}}>
                       ID - {card.winner.uniqueId}
                     </span>
                   </> : ''}

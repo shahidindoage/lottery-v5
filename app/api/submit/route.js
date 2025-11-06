@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, email, phone, tableNumber, seatNumber, terms, privacy } = body;
+    const { name, email, phone,  terms, privacy } = body;
 
     if (!name || !terms  || !email || !phone) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -32,8 +32,6 @@ export async function POST(req) {
         name,
         email,
         phone,
-        table_number: tableNumber,
-        seat_number: seatNumber,
         accepted_terms: terms,
         accepted_privacy: false,
         winner: 0,

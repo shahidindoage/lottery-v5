@@ -110,6 +110,7 @@ export default function AdminMenu() {
       {open && (
         <div style={dropdownStyle}>
           <DropdownItem icon="⭐" text="Game Page" as={Link} href="/admin/dashboard/game" onClick={() => setOpen(false)} />
+           <DropdownItem icon="🏆" text="Winners Page" as={Link} href="/winners" onClick={() => setOpen(false)} />
           <DropdownItem icon="⬇️" text="Export CSV" onClick={handleExport} />
           < DropdownItem1 icon="🗑️" text="Clear Entries" danger onClick={handleClear} />
              <div style={dividerStyle}></div>
